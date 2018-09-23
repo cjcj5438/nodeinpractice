@@ -1,4 +1,5 @@
-var redis = require('redis'),
+//首先要启动一个redis 缓存的服务才行
+var redis = require('redis');
 var client = redis.createClient();
 
 client.on('error', function(err) {
@@ -11,4 +12,5 @@ client.on('monitor', function(timestamp, args) { //<co id="callout-events-detect
 
 client.on('ready', function() {
   // Start app here
+  //   这里写redis 的业务代码  然后通过 monitor 来追踪是否有活动. 和 event的监听on 事件是一个意思吧
 });
