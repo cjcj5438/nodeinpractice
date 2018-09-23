@@ -7,3 +7,4 @@ function MyStream(options) {
 MyStream.prototype = Object.create(Readable.prototype, { //<co id="callout-streams-inheritance-2" />
   constructor: { value: MyStream }
 });
+console.log(MyStream)
