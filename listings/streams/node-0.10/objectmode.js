@@ -6,7 +6,7 @@ util.inherits(MemoryStream, stream.Readable);
 function MemoryStream(options) {
   options = options || {};
   options.objectMode = true; //<co id="listing-streams-objectmode-1" />
-  stream.Readable.call(this, options);
+  stream.Readable.call(this, options); //把参数传给 stream.Readable 构造函数
 }
 
 MemoryStream.prototype._read = function(size) {
