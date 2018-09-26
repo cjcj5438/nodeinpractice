@@ -10,7 +10,7 @@ function MemoryStream(options) {
 }
 
 MemoryStream.prototype._read = function(size) {
-  this.push(process.memoryUsage()); //<co id="listing-streams-objectmode-2" />
+  this.push(process.memoryUsage());// 用node 内置方法来创建一个对象 //<co id="listing-streams-objectmode-2" />
 };
 
 var memoryStream = new MemoryStream();
