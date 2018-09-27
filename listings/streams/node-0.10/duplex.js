@@ -26,4 +26,5 @@ HungryStream.prototype._read = function(size) {
 };
 
 var hungryStream = new HungryStream();
+// 不知道为什么写完之后就 会有输出流  方法是自动调用的吗?
 process.stdin.pipe(hungryStream).pipe(process.stdout); //<co id="callout-streams-duplex-4" />
