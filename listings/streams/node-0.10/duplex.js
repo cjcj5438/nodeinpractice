@@ -11,7 +11,7 @@ function HungryStream(options) {
   this.waiting = false; //<co id="callout-streams-duplex-1" />
 }
 /*enoding 不知道是做什么的
-* callback() 这样写除了代码可扩展, 有实际意义吗?*/
+* callback() 这样写除了代码可扩展, 有实际意义吗?🍓*/
 HungryStream.prototype._write = function(chunk, encoding, callback) {
   this.waiting = false;
   this.push('\u001b[32m' + chunk + '\u001b[39m'); // 把实现的数据推到内部队列,
@@ -20,7 +20,7 @@ HungryStream.prototype._write = function(chunk, encoding, callback) {
 
 HungryStream.prototype._read = function(size) {
   if (!this.waiting) {
-    this.push('Feed me data! > '); //<co id="callout-streams-duplex-3" />
+    this.push('Feed me data! > 🍙'); //<co id="callout-streams-duplex-3" />
     this.waiting = true;
   }
 };
